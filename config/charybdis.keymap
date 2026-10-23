@@ -70,14 +70,14 @@
         DEAD(m_ocir, CARET, O)
         // ` com Shift vira ~ no us+intl, por isso À precisa de mod-morph
         DEAD(m_acrase, GRAVE, A)
-        DEAD(m_Acrase, GRAVE, LS(A))
+        DEAD(m_acrase_shift, GRAVE, LS(A))
     };
 
     behaviors {
         a_crase: a_crase {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&m_acrase>, <&m_Acrase>;
+            bindings = <&m_acrase>, <&m_acrase_shift>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
